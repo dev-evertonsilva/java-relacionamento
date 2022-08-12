@@ -18,6 +18,8 @@ public class ListaAlteraRemoveProfessor {
         professor.setNome("Maria");
         System.out.println(professor.getId_professor() + " " + professor.getNome());
 
+        em.remove(professor);
+
         em.getTransaction().begin();
         em.getTransaction().commit();
 

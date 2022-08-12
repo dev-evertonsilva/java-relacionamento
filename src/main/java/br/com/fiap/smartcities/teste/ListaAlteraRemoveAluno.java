@@ -18,6 +18,9 @@ public class ListaAlteraRemoveAluno {
         aluno.setNome("Jordan");
         System.out.println(aluno.getId_aluno() + " " + aluno.getNome());
 
+        //Remove registro
+        em.remove(aluno);
+
         em.getTransaction().begin();
         em.getTransaction().commit();
 
